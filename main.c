@@ -17,6 +17,7 @@
 #include <msp430.h>
 
 //Part of your documentation should be listing the valid inputs and outputs for the functions you create.
+#include <stdio.h>
 int math(int num1, int num2, char Operator)
 {
 
@@ -25,27 +26,39 @@ int math(int num1, int num2, char Operator)
 
     case '+':
         return num1 + num2;
+        break;
     case '-':
         return num1 - num2;
+        break;
     case '*':
         return  num1 * num2;
+        break;
     case '/':
         return num1 / num2;
+        break;
     case '%':
         return num1 % num2;
+        break;
     case '<':
-        return num1 <<< num2;
+        return num1 << num2;
+        break;
     case '>':
-        return  num1 >>> num2;
+        return  num1 >> num2;
+        break;
     case '&':
-            return num1 & num2;
+         return num1 & num2;
+         break;
     case '|':
-            return num1 | num2;
+         return num1 | num2;
+         break;
     case '^':
         return num1 ^ num2;
+        break;
     case '~':
         return ~num1;
+        break;
     default:
+        break;
         return -1;
     }
 }
